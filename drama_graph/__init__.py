@@ -1,0 +1,1 @@
+"""Minimal package for building and visualizing character graphs from DraCor-TEI."""
