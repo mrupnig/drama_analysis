@@ -1,4 +1,4 @@
-# Sensor Analysis – Mini-Projekt für IDE-Usability-Studie
+# Drama Analysis – Mini-Projekt für IDE-Usability-Studie
 
 Dieses kleine Python-Projekt dient dazu, typische IDE-Funktionalitäten in einer empirischen Untersuchung zu testen:
 
@@ -12,4 +12,4 @@ Dieses kleine Python-Projekt dient dazu, typische IDE-Funktionalitäten in einer
 ## Aufgaben
 
 die Aufgabenstellungen liegen hier:
-- [Aufgaben A](task.md)
+- [Aufgaben](task.md)
