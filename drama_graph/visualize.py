@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 import networkx as nx
 
 
+def node_colors_by_speech_count(graph: nx.Graph):
+    return "#6baed6"
+
 def render_graph_png(
     output_path: Path,
     graph: nx.Graph,
@@ -38,7 +41,7 @@ def render_graph_png(
         graph,
         pos,
         node_size=sizes,
-        node_color="#6baed6",
+        node_color=node_colors_by_speech_count(graph),
         alpha=0.9,
     )
 
