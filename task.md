@@ -228,21 +228,14 @@ Erstelle diese Funktion in `visualize.py`. Ersetze den Color-Code in `render_gra
 ```python
 def node_colors_by_speech_count(
     graph: nx.Graph,
-    base_color: str = "#6baed6",
-) -> list[str]:
-    """
-    Erzeugt eine Farb-Liste für Knoten basierend auf speech_count.
-    """
+    base_color: str = "#6baed6",)
     max_count = max(
-        int(graph.nodes[n].get("speech_count", 1)) for n in graph.nodes
-    )
-
+        int(graph.nodes[n].get("speech_count", 1)) for n in graph.nodes)
     return [
         plt.cm.Blues(
             int(graph.nodes[n].get("speech_count", 1)) / max_count
         )
-        for n in graph.nodes
-    ]
+        for n in graph.nodes]
 ```
 
 ### Misst
