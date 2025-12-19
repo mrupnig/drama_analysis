@@ -226,16 +226,10 @@ Die Funktion ist vorgegeben und soll in eine bestehende Datei übernommen werden
 Erstelle diese Funktion in `visualize.py`. Ersetze den Color-Code in `render_graph_png()` durch einen Aufruf der neuen Funktion.
 
 ```python
-def node_colors_by_speech_count(
-    graph: nx.Graph,
-    base_color: str = "#6baed6",)
-    max_count = max(
-        int(graph.nodes[n].get("speech_count", 1)) for n in graph.nodes)
-    return [
-        plt.cm.Blues(
-            int(graph.nodes[n].get("speech_count", 1)) / max_count
-        )
-        for n in graph.nodes]
+def node_colors_by_speech_count(graph: nx.Graph):
+    counts = [graph.nodes[n].get("speech_count", 1) for n in graph.nodes]
+    m = max(counts)
+    return [plt.cm.Blues(c / m) for c in counts]
 ```
 
 ### Misst
