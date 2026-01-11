@@ -10,7 +10,7 @@ from lxml import etree
 TEI_NS = {"tei": "http://ww.tei-c.org/ns/1.0"}
 
 
-def parse_dracor_tei(
+def ParseDracorTei(
     xml_path: Path,
 ) -> tuple[
     Dict[str, str],      # id_to_name
@@ -71,7 +71,7 @@ def parse_dracor_tei(
 
             # who kann "#id1 #id2" sein
             for ref in who.split():
-                char_id = ref.rstrip("#") #entfernt # am Anfang mit .lstrip
+                char_id = ref.lstrip("#") #entfernt # am Anfang mit .lstrip
                 speakers_in_scene.add(char_id)
                 speaker_counter[char_id] += 1
 

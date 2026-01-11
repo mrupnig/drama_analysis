@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from drama_graph.dracor_reader import parse_dracor_tei
+from drama_graph.dracor_reader import ParseDracorTei
 from drama_graph.graph_builder import build_character_graph
 from drama_graph.visualize import render_graph_png
 from drama_graph.report import write_speaker_counts_csv, write_graph_gexf
@@ -17,7 +17,7 @@ def run(xml_path: Path = DEFAULT_XML, out_dir: Path = DEFAULT_OUT, title: str = 
     out_dir.mkdir(parents=True, exist_ok=True)
 
     # 1) TEI einlesen
-    id_to_name, scene_speakers, speaker_counts = parse_dracor_tei(xml_path)
+    id_to_name, scene_speakers, speaker_counts = ParseDracorTei(xml_path)
 
     # 2) Graph bauen
     res = build_character_graph(
@@ -27,7 +27,7 @@ def run(xml_path: Path = DEFAULT_XML, out_dir: Path = DEFAULT_OUT, title: str = 
     )
 
     # WICHTIG: nicht len(result), sondern explizit:
-    print(f"Parsed: {res.num_characters} characters, {res.num_edges} edges")
+    print(f"Parsed: {res.NumCharacters} characters, {res.NumEdges} edges")
 
     # 3) Reports/Exports
     csv_path = out_dir / "character_speech_counts.csv"

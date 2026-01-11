@@ -21,11 +21,11 @@ class DramaGraphResult:
     id_to_name: Dict[str, str]
 
     @property
-    def num_characters(self) -> int:
+    def NumCharacters(self) -> int:
         return self.graph.number_of_nodes()
 
     @property
-    def num_edges(self) -> int:
+    def NumEdges(self) -> int:
         return self.graph.number_of_edges()
 
     def __len__(self) -> int:
@@ -33,7 +33,7 @@ class DramaGraphResult:
         Damit len(result) nicht mehr crasht:
         Definiert als Anzahl Figuren (Graph-Knoten).
         """
-        return self.num_characters
+        return self.NumCharacters
 
 
 def build_character_graph(
