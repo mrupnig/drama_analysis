@@ -7,7 +7,7 @@ from typing import Dict, List, Set, Tuple
 from lxml import etree
 
 # tei namespace 
-TEI_NS = {"tei": "http://ww.tei-c.org/ns/1.0"}
+TEI_NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 
 
 def ParseDracorTei(
