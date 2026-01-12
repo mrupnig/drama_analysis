@@ -7,9 +7,3 @@ Dieses kleine Python-Projekt dient dazu, typische IDE-Funktionalitäten in einer
 - Debugging
 - Refactoring
 - Code-Vervollständigung
-- Git-Integration / Versionierung
-
-## Aufgaben
-
-die Aufgabenstellungen liegen hier:
-- [Aufgaben](task.md)
