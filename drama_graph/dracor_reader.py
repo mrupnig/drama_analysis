@@ -10,7 +10,7 @@ from lxml import etree
 TEI_NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 
 
-def ParseDracorTei(
+def parse_dracor_tei(
     xml_path: Path,
 ) -> tuple[
     Dict[str, str],      # id_to_name
