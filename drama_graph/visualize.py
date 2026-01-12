@@ -68,4 +68,5 @@ def render_graph_png(
     plt.axis("off")
     plt.tight_layout()
     plt.savefig(output_path, dpi=200)
+    plt.show()
     plt.close()
